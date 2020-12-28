@@ -233,18 +233,18 @@ def function14():
     # Hint use split method
     
     
-    arr = numpy.arange(10, 34, 1) #write reshape code
-    ans = #write your code here 
+    arr = np.arange(10, 34, 1).reshape(8,3) #write reshape code
+    ans = np.split(arr, 4) #write your code here 
   
     return ans
 
-     """
+    """
      Expected Output:
        [array([[10, 11, 12],[13, 14, 15]]), 
         array([[16, 17, 18],[19, 20, 21]]), 
         array([[22, 23, 24],[25, 26, 27]]), 
         array([[28, 29, 30],[31, 32, 33]])]
-     """ 
+    """ 
     
 #task15
 def function15():
@@ -252,16 +252,16 @@ def function15():
     
     
     arr = np.array([[ 8,  2, -2],[-4,  1,  7],[ 6,  3,  9]])
-    ans = #write your code here 
+    ans = arr[arr[:,1].argsort()] #write your code here 
   
     return ans
 
-     """
+    """
      Expected Output:
            array([[-4,  1,  7],
                    [ 8,  2, -2],
                    [ 6,  3,  9]])
-     """ 
+    """ 
     
 #task16
 def function16():
@@ -270,18 +270,18 @@ def function16():
     
     x = np.array([[1], [2], [3]])
     y = np.array([[2], [3], [4]])
-    ans = #write your code here 
+    ans = np.dstack((x,y)) #write your code here 
   
     return ans
 
-     """
+    """
      Expected Output:
                 [[[1 2]]
 
                  [[2 3]]
 
                  [[3 4]]]
-     """ 
+    """ 
     
     
 #Task17
@@ -290,7 +290,7 @@ def function17():
     # otherwise it will be replaced with "NO"
     # Hint: np.where
     arr = np.arange(1,10*10+1).reshape((10,10))
-    return           # Write Your Code HERE
+    return np.where((arr % 3==0) & (arr % 5 == 0), "Yes","No")  # Write Your Code HERE
 
 #Excpected Out
 """
@@ -312,7 +312,7 @@ def function18():
     # count values of "students" are exist in "piaic"
     piaic = np.arange(100)
     students = np.array([5,20,50,200,301,7001])
-    x = # Write you code Here
+    x = len(np.intersect1d(piaic, students)) # Write you code Here
     return x
 
     #Expected output: 3
