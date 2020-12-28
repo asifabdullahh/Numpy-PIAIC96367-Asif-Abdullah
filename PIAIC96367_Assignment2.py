@@ -326,10 +326,11 @@ def function19():
     # then create variable "b" with value equal to 5
     # Now return output as "(X*W)+b:
 
-    X =   # Write your code here
-    W =   # Write your code here 
-    b =   # Write your code here
-    output =    # Write your code here
+    X =  np.arange(1,26).reshape(5,5) # Write your code here
+    W =  np.copy(X).transpose() # Write your code here 
+    b =  5 # Write your code here
+    output =  (X*W)+b  # Write your code here
+    return output
 
     #expected output
     """
@@ -342,12 +343,12 @@ def function19():
 
 
 #Task20
-def fucntion20():
+def function20():
     #apply fuction "abc" on each value of Array "X"
     x = np.arange(1,11)
     def xyz(x):
         return x*2+3-2
 
-    return #Write your Code here
+    return xyz(x)#Write your Code here
 #Expected Output: array([ 3,  5,  7,  9, 11, 13, 15, 17, 19, 21])
 #--------------------------X-----------------------------X-----------------------------X----------------------------X---------------------
