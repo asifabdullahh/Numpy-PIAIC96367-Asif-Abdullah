@@ -127,8 +127,8 @@ def function6():
 def function7():
     #  Create an array of zeros with the same shape and type as X. Dont use reshape method
     x = np.arange(4, dtype=np.int64)
-  
-    return #write your code here
+    x = np.zeros_like(x)
+    return x #write your code here
 
     """
     Expected Output:
@@ -139,31 +139,31 @@ def function7():
 def function8():
     # Create a new array of 2x5 uints, filled with 6.
     
-    x = #write your code here
+    x = np.full((3, 5), 6, dtype=np.uint) #write your code here
   
     return x
 
-     """
+    """
      Expected Output:
               array([[6, 6, 6, 6, 6],
                      [6, 6, 6, 6, 6]], dtype=uint32)
-     """ 
+    """ 
     
 #task9
 def function9():
     # Create an array of 2, 4, 6, 8, ..., 100.
     
-    a = # write your code here
+    a = np.arange(2,101,2) # write your code here
   
     return a
 
-     """
-     Expected Output:
+    """
+    Expected Output:
               array([  2,   4,   6,   8,  10,  12,  14,  16,  18,  20,  22,  24,  26,
                     28,  30,  32,  34,  36,  38,  40,  42,  44,  46,  48,  50,  52,
                     54,  56,  58,  60,  62,  64,  66,  68,  70,  72,  74,  76,  78,
                     80,  82,  84,  86,  88,  90,  92,  94,  96,  98, 100])
-     """ 
+    """ 
     
 #task10
 def function10():
@@ -171,16 +171,16 @@ def function10():
     
     arr = np.array([[3,3,3],[4,4,4],[5,5,5]])
     brr = np.array([1,2,3])
-    subt = # write your code here 
+    subt = arr - brr[:,None] # write your code here 
   
     return subt
 
-     """
+    """
      Expected Output:
                array([[2 2 2]
                       [2 2 2]
                       [2 2 2]])
-     """ 
+    """ 
     
     
 #task11
@@ -188,14 +188,14 @@ def function11():
     # Replace all odd numbers in arr with -1 without changing arr.
     
     arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    ans = #write your code here 
+    ans = np.where(arr % 2 == 1, -1, arr) #write your code here 
   
     return ans
 
-     """
-     Expected Output:
+    """
+    Expected Output:
               array([ 0, -1,  2, -1,  4, -1,  6, -1,  8, -1])
-     """ 
+    """ 
     
 #task12
 def function12():
@@ -203,14 +203,14 @@ def function12():
     # HINT: use stacking concept
     
     arr = np.array([1,2,3])
-    ans = #write your code here 
+    ans = np.r_[np.repeat(arr, 3), np.tile(arr, 3)] #write your code here 
   
     return ans
 
-     """
+    """
      Expected Output:
               array([1, 1, 1, 2, 2, 2, 3, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3])
-     """ 
+    """ 
 
 #task13
 def function13():
@@ -218,14 +218,14 @@ def function13():
     
     
     arr = np.array([2, 6, 1, 9, 10, 3, 27])
-    ans = #write your code here 
+    ans = arr[(arr >= 5) & (arr < 10)] #write your code here 
   
     return ans
 
-     """
+    """
      Expected Output:
               array([6, 9])
-     """ 
+    """ 
 
 #task14
 def function14():
