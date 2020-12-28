@@ -1,19 +1,16 @@
 import numpy as np
 
+#task7
+def function7():
+    #  Create an array of zeros with the same shape and type as X. Dont use reshape method
+    x = np.arange(4, dtype=np.int64)
+    x = np.zeros(4, dtype=np.int64)
+    return x #write your code here
 
-#task5
-def function5():
-    #Create a null vector of size 20 with 4 rows and 5 columns with numpy function
-   
-    z = np.zeros(20).reshape(4,5)#wrtie your code here
-  
-    return z
     """
     Expected Output:
-          array([[0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0]])
+          array([0, 0, 0, 0], dtype=int64)
     """ 
-z = function5()
+
+z = function7()
 print(z)
