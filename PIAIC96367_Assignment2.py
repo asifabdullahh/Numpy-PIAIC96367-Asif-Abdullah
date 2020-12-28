@@ -48,7 +48,7 @@ def function2():
     #array value should be satart from 10 and end with 36 (both included)
     # Hint: dtype, reshape 
     
-    x = np.arange(1,28,dtype=np.float64).reshape((3,3,3))     #wrtie your code here
+    x = np.arange(1,28,dtype=np.float64).reshape((3,3,3))+ 9     #wrtie your code here
 
 
     return x
@@ -72,7 +72,10 @@ def function3():
     #extract those numbers from given array. those are must exist in 5,7 Table
     #example [35,70,105,..]
     a = np.arange(1, 100*10+1).reshape((100,10))
-    x = a[] #wrtie your code here
+    x = a[3::7,4]
+    d = a[6::7,9] #wrtie your code here
+    x = np.concatenate((x,d), axis =0)
+    x = np.sort(x)
     return x
     """
     Expected Output:
